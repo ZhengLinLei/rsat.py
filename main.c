@@ -7,7 +7,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
-#define NUM_HIJOS 6
+#define NUM_HIJOS 8
 
 int main(int argc, char *argv[]) {
 
