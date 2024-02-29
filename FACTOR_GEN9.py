@@ -1,4 +1,5 @@
-import sys, time, primefac as p
+import sys, time
+from factordb.factordb import FactorDB
 
 
 if __name__ == "__main__":
@@ -13,13 +14,16 @@ if __name__ == "__main__":
         
     print("\n ==== Trying with EULER ==== \n\n")
     t = time.time()
-    f = p.ecm(n)
+    f = FactorDB(n)
+    f.connect()
+    l = f.get_factor_list()
     t1 = time.time()
-    if f == 0:
+    if len(l) == 0:
         print("\n", n, "couldn't be factored :(\n")
         exit(-1)
     else:
-        print("\nFactors are: ", f)
+        print("\nFactors are: ", l)
+        print("\nFactor API: ", f.get_factor_from_api())
         print("\nTime:", t1 - t, "s\n")
         exit(0)
 
