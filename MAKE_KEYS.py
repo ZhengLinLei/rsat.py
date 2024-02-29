@@ -2,11 +2,12 @@
 
 # Sender
 from random import choice
+import sys
 
 # Change the values
-p = 19
-q = 7
-m = 1234
+p = int(sys.argv[1])
+q = int(sys.argv[2])
+m = int(sys.argv[3]) if len(sys.argv) > 3 else 0
 
 
 # --------------------
