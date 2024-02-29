@@ -12,7 +12,7 @@ if __name__ == "__main__":
     except:
         exit(-1)
         
-    print("\n ==== Trying with EULER ==== \n\n")
+    print("\n ==== Trying with FACTORDB ==== \n\n")
     t = time.time()
     f = FactorDB(n)
     f.connect()

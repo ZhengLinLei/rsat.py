@@ -1,4 +1,5 @@
-import sys, time, primefac as p
+import sys, time
+from sympy import factorint
 
 
 if __name__ == "__main__":
@@ -11,11 +12,11 @@ if __name__ == "__main__":
     except:
         exit(-1)
         
-    print("\n ==== Trying with PRIMEFAC ==== \n\n")
+    print("\n ==== Trying with SYMPY ==== \n\n")
     t = time.time()
-    f = p.ecm(n)
+    f = factorint(n) 
     t1 = time.time()
-    if f == 0:
+    if len(f) == 0:
         print("\n", n, "couldn't be factored :(\n")
         exit(-1)
     else:
